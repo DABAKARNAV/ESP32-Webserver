@@ -15,7 +15,7 @@
 
 /* The sign in credentials */
 #define AUTHOR_EMAIL "iiotminiproject@gmail.com"
-#define AUTHOR_PASSWORD "qublblfjmavpdqwu"
+#define AUTHOR_PASSWORD "qublblfjmavpdqwu" // This is a Application Password that can be generated on Gmail Security Settings.
 
 /* Recipient's email*/
 #define RECIPIENT_EMAIL "arnav48.dabak@gmail.com"
@@ -159,18 +159,8 @@ void setup()
   message.sender.email = AUTHOR_EMAIL;
   message.subject = "Temperature Alert!!!!";
   message.addRecipient("Arnav", RECIPIENT_EMAIL);
-
-  /*
-  //Send HTML message
-  String htmlMsg = "<div style=\"color:#2f4468;\"><h1>Hello World!</h1><p>- Sent from ESP board</p></div>";
-  message.html.content = htmlMsg.c_str();
-  message.html.content = htmlMsg.c_str();
-  message.text.charSet = "us-ascii";
-  message.html.transfer_encoding = Content_Transfer_Encoding::enc_7bit;*/
-
   
   //Send raw text message
-  
   
   String textMsg = "The Temperature is beyond Optimal Range, Please over-ride the control of the Cooling System";
   message.text.content = textMsg.c_str();
